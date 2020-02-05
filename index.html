@@ -4,48 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>stas</title>
+    <title>zagolovok</title>
     <style>
-        body {
-            font-size: 16px;
-            padding: 20px;
-        }
-        a.lesson {
+        .short-info {
             position: relative;
-            display: inline-block;
-            padding: 8px 16px;
-            margin: 4px 0px;
-            border-left: #505050 solid 4px;
-            color: #505050;
-            background: #50505015;
+            display: grid;
+            overflow: hidden;
+            height: 100vh;
+            margin: 0px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: "photo name"
+                                 "photo about"
+                                 "links links";                                                          
         }
-        a.lesson:hover {
-            background-color: #505050;
-            color: #ffffff;
-            border-left-color: #c0c0c0;
-            text-decoration: none;
-            transition: 1s background-color, 
-                1s color, 
-                1s border-left-color;
+        .photo-block{
+            grid-area: photo;
+            background: #ae00ff;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+        .photo-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-image: url(https://tlgrmx.ru/stickers/1/17.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+        .name-block{
+            grid-area: name;
+            background: #b617ff;
+            display: flex;
+            align-items: flex-end;
+            font-size: 80px;
+            font-style: italic;
+        }
+        .about-me-block{
+            grid-area: about;
+            background: #a700f5;
+            font-size: 20px;
+        }
+        .links-block{
+            grid-area: links;
+            background: #b110fc;
         }
     </style>
 </head>
 <body>
-    <h2>stasikkarasik</h2>
-    <a class="lesson" href="./firstlesson/index.html" title=" ">первый урок</a>
-    <br>
-    <a class="lesson" href="./xtree/index.html" title=" ">елка</a>
-    <br>
-    <a class="lesson" href="./textfolder/index.html" title=" ">текст</a>
-    <br>
-    <a class="lesson" href="./lesson_js/index.html" title=" ">JavaScript</a>
-    <br>
-    <a class="lesson" href="./lesson_artbox/index.html" title=" ">елка иголка</a>
-    <br>
-    <a class="lesson" href="./lesson_x0/index.html" title=" ">TicTacToe game</a>
-    <br>
-</body>
-</html>
-
+    <div id="page1" class="short-info">
+      <div class="photo-block">
+        <div class="photo-image"></div>
+      </div>
+      <div class="name-block">privet</div>
+      <div class="about-me-block">рыба</div>
+      <div class="links-block"></div>
+    </div>
+    
 </body>
 </html>
