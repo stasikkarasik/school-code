@@ -1,0 +1,71 @@
+
+.short-info {
+    position: relative;
+    display: grid;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1f;
+    grid-template-areas: "photo name"
+                         "photo about"
+                         "links links";                                                          
+}
+.photo-block{
+    grid-area: photo;
+    background: #ae00ff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.photo-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(https://tlgrmx.ru/stickers/1/17.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.name-block{
+    grid-area: name;
+    background: #b617ff;
+    display: flex;
+    align-items: flex-end;
+    font-size: 80px;
+    font-style: italic;.
+}
+.about-me-block{
+    grid-area: about;
+    background: #a700f5;
+    font-size: 20px;
+}
+.links-block{
+    grid-area: links;
+    background: #b110fc;
+}
+@media(max-width: 320px) {
+    .short-info {
+        position: relative;
+    display: grid;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
+    grid-template-areas: "photo name"
+                         "photo about"
+                         "links links";
+    overflow: hidden;
+    min-height: 100vh;
+    background: var;
+    }
+    .photo-block{
+    grid-area: photo;
+    background: #ae00ff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    }
+}
